@@ -15,12 +15,21 @@
 }
 
 body {
+  background-color: #ffeaa7;
   margin: 0;
-  padding: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0px;
+}
+
+.overlay {
+  padding: 15px;
+  width: 100%;
+  height: 100%;
 }
 
 #app {
