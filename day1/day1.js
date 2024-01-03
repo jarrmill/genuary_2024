@@ -21,20 +21,25 @@ let handleMousemove = (event) => {
 
 document.addEventListener('mousemove', handleMousemove)
 
+const rgb = function (r, g, b) {
+  r = Math.floor(r)
+  g = Math.floor(g)
+  b = Math.floor(b)
+  return ['rgb(', r, ',', g, ',', b, ')'].join('')
+}
+
 // setup will be called once, before draw is called
 const setup = () => {
   app.stage.addChild(dotContainer)
-  const numCols = 25
-  const numRows = 25
+  const numCols = 40
+  const numRows = 40
   for (let x = 0; x < numCols; x++) {
     let cX = (window.innerWidth / numCols) * x
     for (let y = 0; y < numRows; y++) {
       let cY = (window.innerHeight / numRows) * y
       const r = 0xff * Math.random()
-      const g = 0xff * Math.random()
-      const b = 0xff * Math.random()
-
-      let dot = new Shape(cX, cY, 10, r + g + b)
+      let rand = Math.min(255 * Math.random(), 200)
+      let dot = new Shape(cX, cY, 5, rgb(rand, rand, 255))
       dotContainer.addChild(dot)
     }
   }

@@ -26,6 +26,7 @@ export default class Shape extends Graphics {
       easeOutCubic(Math.abs(dir.x / windowWidth)) * -1,
       easeOutCubic(Math.abs(dir.y / windowHeight)) * -1
     )
+    normalizedDiff.mult(Math.random())
 
     dir.normalize()
     dir.multVector(normalizedDiff)
