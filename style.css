@@ -15,7 +15,8 @@
 }
 
 body {
-  background-color: #ffeaa7;
+  background-color: #fdcb6e;
+  color: #1b1b1b;
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -35,17 +36,4 @@ h1 {
 #app {
   margin: 0 auto;
   text-align: center;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
